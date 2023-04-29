@@ -21,6 +21,27 @@ Dependencies:
 - `pip install wandb` for optional logging <3
 - `pip install tqdm` <3
 
+## Development
+
+Install [poetry](https://python-poetry.org/docs/#installation)
+
+```shell
+# Change config to create .venv folder in project root
+poetry config virtualenvs.in-project true
+
+# Set the Python version for poetry to use. If there's no .venv, it will create one.
+poetry env use 3.11
+
+# Example commands
+poetry install
+poetry update
+poetry shell
+poetry add black --group dev
+
+# Activate the virtual environment
+source /.venv/bin/activate
+```
+
 ## quick start
 
 If you are not a deep learning professional and you just want to feel the magic and get your feet wet, the fastest way to get started is to train a character-level GPT on the works of Shakespeare. First, we download it as a single (1MB) file and turn it from raw text into one large stream of integers:
